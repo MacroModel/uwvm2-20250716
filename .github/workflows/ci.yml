@@ -67,7 +67,7 @@ jobs:
         with:
           prepare: pkg install -y llvm20 xmake-io
       - name: Configure
-        run: xmake f --use-llvm=y -m debug
+        run: xmake f -m debug
       - name: Build
         run: xmake b
       - name: Test
