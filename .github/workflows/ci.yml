@@ -25,7 +25,7 @@ jobs:
           sudo apt-get install -t llvm-toolchain-noble-20 clang-20 clang-tools-20
           sudo apt-get install xmake
       - name: Workaround for clang-scan-deps
-        run: sudo ln -s /usr/bin/clang-scan-deps-20 /usr/bin/clang-scan-deps
+        run: sudo ln -s /usr/lib/llvm-20/bin/clang-scan-deps /usr/bin/clang-scan-deps
       - name: Configure
         run: xmake f --use-llvm=y -m debug
       - name: Build
