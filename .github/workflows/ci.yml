@@ -54,3 +54,17 @@ jobs:
         run: xmake b
       - name: Test
         run: xmake run uwvm --version
+  # ---------------------------------------------------------------------------
+  freebsd:
+    name: FreeBSD
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vmactions/freebsd-vm@v1
+        with:
+          prepare: |
+            pkg install -y llvm20 xmake-io
+          run: |
+            xmake f --use-llvm=y -m debug
+            xmake b
+            xmake run uwvm --version
