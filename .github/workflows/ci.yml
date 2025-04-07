@@ -22,7 +22,7 @@ jobs:
           wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/llvm.asc
           sudo add-apt-repository ppa:xmake-io/xmake
           sudo add-apt-repository "deb http://apt.llvm.org/noble/ llvm-toolchain-noble-20 main"
-          sudo apt-get install -t llvm-toolchain-noble clang-20 clang-tools-20
+          sudo apt-get install -t llvm-toolchain-noble-20 clang-20 clang-tools-20
           sudo apt-get install xmake
       - name: Workaround for clang-scan-deps
         run: sudo ln -s /usr/bin/clang-scan-deps-20 /usr/bin/clang-scan-deps
