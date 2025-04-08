@@ -61,8 +61,6 @@ jobs:
     defaults:
       run:
         shell: freebsd {0}
-    env:
-      XMAKE_ROOT: y
     steps:
       - uses: actions/checkout@v4
       - uses: vmactions/freebsd-vm@v1
@@ -70,7 +68,7 @@ jobs:
           prepare: |
             pkg install -y llvm20 xmake-io
       - name: Configure
-        run: xmake f -m debug
+        run: xmake f -m debug --root
       - name: Build
         run: xmake b
       - name: Test
