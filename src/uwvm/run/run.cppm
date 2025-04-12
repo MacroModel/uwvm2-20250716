@@ -80,7 +80,7 @@ export namespace uwvm::run
             case 1:
             {
                 // parse wasm 1
-                ::uwvm::wasm::storage::execute_wasm_binfmt_ver1_storage =
+                ::uwvm::wasm::storage::exec_wasm_binfmt_ver1_storage =
                     ::uwvm::wasm::feature::binfmt_ver1_handler(::uwvm::wasm::feature::wasm_binfmt1_features,
                                                                reinterpret_cast<::std::byte const*>(::uwvm::wasm::storage::execute_wasm_file.cbegin()),
                                                                reinterpret_cast<::std::byte const*>(::uwvm::wasm::storage::execute_wasm_file.cend()));

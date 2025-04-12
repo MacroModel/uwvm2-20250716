@@ -41,6 +41,6 @@ export namespace uwvm::wasm::storage
 
     // WASM Module Binfmt 1
     inline ::uwvm::wasm::feature::wasm_binfmt_ver1_module_storage_t
-        execute_wasm_binfmt_ver1_storage{};  // No global variable dependencies from other translation units
+        exec_wasm_binfmt_ver1_storage{};  // No global variable dependencies from other translation units
         
 }  // namespace uwvm::wasm::storage
