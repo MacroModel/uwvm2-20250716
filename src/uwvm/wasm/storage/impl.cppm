@@ -23,6 +23,6 @@
 module;
 
 export module uwvm.wasm.storage;
-export import :execute_wasm;
+export import :exec_wasm;
 export import :import_wasm;
 export import :import_dl;

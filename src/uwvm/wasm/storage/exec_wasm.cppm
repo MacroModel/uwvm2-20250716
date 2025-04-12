@@ -24,7 +24,7 @@
 
 module;
 
-export module uwvm.wasm.storage:execute_wasm;
+export module uwvm.wasm.storage:exec_wasm;
 
 import fast_io;
 import parser.wasm.base;
